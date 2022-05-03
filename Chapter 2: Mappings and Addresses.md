@@ -52,7 +52,7 @@ zombieToOwner adlı bir mapping oluşturun. Anahtar(key) bir uint (zombiyi kimli
 
     Zombie[] public zombies;
 
-    // declare mappings here
+
 // zombieToOwner adlı key uint olarak saklanan ve adress değerinde public giden bir mapping
 
     mapping (uint => address) public zombieToOwner;
