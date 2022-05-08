@@ -1,11 +1,11 @@
-Bölüm4:Gerektir
+Bölüm4:Gerektir(Require)
 
 İlk dersimizde, kullanıcıların createRandomZombie'yi arayarak ve bir ad girerek yeni zombiler oluşturabilmelerini sağladık. Fakat, kullanıcılar ordularında sınırsız zombi yaratmak için bu işlevi çağırmaya devam etselerdi, oyun çok eğlenceli olmazdı.
 Bizde daha eğlenceli hale getirmek için Her oyuncunun bu işlevi yalnızca bir kez çağırabilmesini sağlayım. Bu şekilde yeni oyuncular, ordularında ilk zombiyi yaratmak için uğraşması ve öğrenmesi gereksin.
 
 Bu şekilde yeni oyuncular, ordularında ilk zombiyi yaratmak için oyuna ilk başladıklarında onu arayacaklardır.
 
-Bu fonksiyonun  oyuncu başına yalnızca bir kez çağrılabilmesini nasıl sağlarız?
+**Bu fonksiyonun  oyuncu başına yalnızca bir kez çağrılabilmesini nasıl sağlarız?**
 
 Require fonksiyonu burada devreye girmektedir, require fonksiyonu bir hata oluşturmasını ve bazı koşullar doğru değilse yürütmeyi durdurmasını sağlar:
 
@@ -22,11 +22,11 @@ Require fonksiyonu burada devreye girmektedir, require fonksiyonu bir hata oluş
      return "Hi!";
     }
 
-Bu fonksiyon sayHiToVitalik("Vitalik") ile çağırırsanız, "Hi!" döndürür. Başka bir girdi ile çağırırsanız, bir hata verir ve yürütülmez.
+Bu fonksiyon **sayHiToVitalik("Vitalik")** ile çağırırsanız, **"Hi!"** döndürür. Başka bir girdi ile çağırırsanız, bir hata verir ve yürütülmez.
 
 Bu nedenle, bir fonksiyonu çalıştırmadan önce belirli doğrulukları test etmek için kullanmak oldukça kullanışlıdır.
 
-Uygulama
+**Uygulama**
 
 Zombi oyunumuzda, kullanıcının createRandomZombie tekrar arayarak ordusunda sınırsız zombi yaratabilmesini istemiyoruz.
 
