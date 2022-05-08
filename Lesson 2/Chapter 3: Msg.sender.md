@@ -1,4 +1,5 @@
-Bölüm 3: Msg.sender
+**Bölüm 3: Msg.sender**
+
 Artık bir zombinin kime ait olduğunu takip etmek için eşlemelerimiz(mapping) olduğuna göre, onları kullanmak için _createZombie yöntemini güncellemek isteyeceğiz.
 
 >Bunu yapmak için msg.sender adında bir şey kullanmamız gerekiyor.
@@ -6,9 +7,9 @@ Artık bir zombinin kime ait olduğunu takip etmek için eşlemelerimiz(mapping)
 **msg.sender**
 Solidity'de, tüm fonksiyonlar için kullanılabilen belirli global değişkenler vardır. Bunlardan biri, mevcut işlevi çağıran kişinin (veya akıllı kontratın) adresini ifade eden msg.sender'dır.
 
->Not: Solidity'de, fonksiyon yürütmenin her zaman harici bir arayan(caller) ile başlaması gerekir. Bir kontrat, biri onun fonksiyonlarından birini çağırana kadar hiçbir şey yapmadan blok zincirinde duracaktır. 
+>Not: Solidity'de, fonksiyon yürütmenin her zaman harici bir arayan(caller) ile başlaması gerekir. Bir kontrat, biri onun fonksiyonlarından birini çağırana kadar hiçbir şey yapmadan blokchainde duracaktır. 
 **Yani her zaman bir msg.sender olacak**.
-‘’’
+```
 mapping (address => uint) favoriteNumber;
 
 function setMyNumber(uint _myNumber) public {
@@ -22,19 +23,19 @@ function whatIsMyNumber() public view returns (uint) {
   // Will be `0` if the sender hasn't called `setMyNumber` yet
   return favoriteNumber[msg.sender];
 }
-‘’’
+```
 Bu örnekte, herhangi biri setMyNumber'ı arayabilir ve kontratımızın adresine bağlı olacak bir uint saklayabilir. Sonra whatIsMyNumber'ı aradıklarında, depoladıkları uint'e iade edilebilir.
 
->Msg.sender'ı kullanmak size Ethereum blok zincirinin güvenliğini sağlar - birinin başka birinin verilerini değiştirmesinin tek yolu, Ethereum adresiyle ilişkili özel anahtarı çalmak olacaktır.
+>**Msg.sender'ı kullanmak size Ethereum blok zincirinin güvenliğini sağlar - birinin başka birinin verilerini değiştirmesinin tek yolu, Ethereum adresiyle ilişkili özel anahtarı çalmak olacaktır.**
 
 **Uygulama**
 Zombinin sahipliğini fonksiyonu çağıran kişiye atamak için ders 1'deki _createZombie yöntemimizi güncelleyeceğiz.
 
-1.İlk olarak, yeni zombinin kimliğini geri aldıktan sonra, bu id altında msg.sender'ı depolamak için zombieToOwner eşlememizi güncelleyelim.
+>İlk olarak, yeni zombinin kimliğini geri aldıktan sonra, bu id altında msg.sender'ı depolamak için zombieToOwner eşlememizi güncelleyelim.
 
-2.İkinci olarak, bu msg.sender için OwnerZombieCount değerini artıralım.
+>İkinci olarak, bu msg.sender için OwnerZombieCount değerini artıralım.
 
->Solidity'de bir uint'i javascript'te olduğu gibi ++ ile artırabilirsiniz:
+**Solidity'de bir uint'i javascript'te olduğu gibi ++ ile artırabilirsiniz:**
 
 
     uint number = 0;
@@ -42,7 +43,7 @@ Zombinin sahipliğini fonksiyonu çağıran kişiye atamak için ders 1'deki _cr
     // "sayı" artık "1"
 
 >Bu bölüm için son cevabınız 2 satır kod olmalıdır.
-      
+```      
     pragma solidity >=0.5.0 <0.6.0;
 
     contract ZombieFactory {
@@ -85,4 +86,4 @@ Zombinin sahipliğini fonksiyonu çağıran kişiye atamak için ders 1'deki _cr
 
     }
 
-
+```
