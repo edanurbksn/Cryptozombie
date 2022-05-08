@@ -1,5 +1,4 @@
-
-_Bölüm 5: Miras_
+**Bölüm 5: Miras(Inheritance)**
  
 Zombi Oyun kodumuz gittikçe uzamakta bu yüzden son derece uzun bir kontrat yapmak yerine, bazen kodu düzenlemek için kod mantığınızı birden çok kontrata bölmek mantıklıdır.
 
@@ -18,11 +17,11 @@ Zombi Oyun kodumuz gittikçe uzamakta bu yüzden son derece uzun bir kontrat yap
     }
 
 
-BabyDoge, Doge'dan miras alır. Bu, BabyDoge'u derler ve dağıtırsanız, onun hem catchphrase()'e hem de otherCatchphrase()'e (ve Doge'da tanımlayabileceğimiz diğer genel işlevlere) erişimi olacağı anlamına gelir.
+BabyDoge, Doge'dan miras alır. Bu, BabyDoge'u derler ve dağıtırsanız, onun hem **catchphrase()**'e hem de **otherCatchphrase()**'e (ve Doge'da tanımlayabileceğimiz diğer genel işlevlere) erişimi olacağı anlamına gelir.
 
 Bu, mantıksal kalıtım için kullanılabilir (örneğin, bir alt sınıfla birlikte, bir Kedi bir Hayvandır). Ancak benzer mantığı farklı kontratlarda gruplandırarak kodunuzu düzenlemek için de kullanılabilir.
 
-_Uygulama_
+**Uygulama**
 
 Sonraki bölümlerde, zombilerimizin beslenmesi ve çoğalması için işlevselliği uygulayacağız. Bu mantığı ZombieFactory'den tüm yöntemleri miras alan kendi kontratımıza koyalım.
 
