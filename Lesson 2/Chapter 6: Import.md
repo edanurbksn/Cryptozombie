@@ -1,10 +1,10 @@
-  _Bölüm 6: İçe Aktarma_
+  **Bölüm 6: İçe Aktarma**
   
   
 Kodumuz oldukça uzuyordu, bu yüzden daha kolay yönetilebilir hale getirmek için bölme işlemi sağladık ve  sağdaki kodların temizlendiğini ve editörün üst kısmında seklemelerin olduğunu görebilirsiniz,sekmelere tıklayarak kodları inceleyebilirsiniz. 
 Solidity projelerinizde uzun kod tabanlarını normalde bu şekilde ele alırsınız.
 
->Birden fazla dosyanız olduğunda ve bir dosyayı diğerine aktarmak istediğinizde, Solidity “import” anahtar sözcüğünü kullanır:
+>Birden fazla dosyanız olduğunda ve bir dosyayı diğerine aktarmak istediğinizde, Solidity **“import”** anahtar sözcüğünü kullanır:
 
     import "./someothercontract.sol";
 
@@ -14,7 +14,7 @@ Solidity projelerinizde uzun kod tabanlarını normalde bu şekilde ele alırsı
 
 Dolayısıyla, bu kontratla aynı dizinde (./'nin anlamı budur) someothercontract.sol adlı bir dosyamız olsaydı, derleyici tarafından içe aktarılırdı.
 
-_Uygulama_
+**Uygulama**
 
 Artık bir çoklu dosya yapısı oluşturduğumuza göre, diğer dosyanın içeriğini okumak için içe aktarmayı kullanmamız gerekiyor:
 
