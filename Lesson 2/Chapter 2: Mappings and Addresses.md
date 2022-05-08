@@ -1,7 +1,9 @@
+Bölüm 2: Eşlemeler(mapping) ve Adresler(address)
+
 Veritabanımızdaki zombileri sahiplendirerek oyunumuzu çok oyunculu hale getirelim.
->Bunu yapmak için 2 yeni veri türüne ihtiyacımız olacak: mapping(eşleme) ve address(adres).
+>Bunu yapmak için 2 yeni veri türüne ihtiyacımız olacak: mapping(eşleme) ve address(adresler).
 **Adresses(adresler)**
-Ethereum blok zinciri, banka hesapları gibi düşünebileceğiniz hesaplardan oluşur. Bir hesabın bir Ether bakiyesi (Ethereum blok zincirinde kullanılan para birimi) vardır ve tıpkı banka hesabınızın diğer banka hesaplarına para transferi yapabilmesi gibi, diğer hesaplara Ether ödemeleri gönderip alabilirsiniz.
+Ethereum blok zinciri, banka hesapları gibi düşünebileceğiniz hesaplardan oluşur. Bir hesabın bir Ether bakiyesi (Ethereum blokchainde kullanılan para birimi) vardır ve tıpkı banka hesabınızın diğer banka hesaplarına para transferi yapabilmesi gibi, diğer hesaplara Ether ödemeleri gönderip alabilirsiniz.
 
 >Her hesabın bir banka hesap numarası gibi düşünebileceğiniz bir adresi vardır. Bu hesaba işaret eden benzersiz bir tanımlayıcıdır ve şöyle görünür:
 `0x571743307078d0859A3f9C7476f898e0793b6b2A`
@@ -17,7 +19,7 @@ Böylece zombilerimizin sahipliği için benzersiz bir kimlik olarak kullanabili
 Ders 1'de yapılara(structs) ve dizileri(arrays) konularını işledik. Eşlemeler(Mappings), organize verileri Solidity'de saklamanın başka bir yoludur.
 
 >Bir eşlemenin tanımlanması şuna benzer:
-‘’’
+```
 // Bir finansal uygulama için, kullanıcının hesap bakiyesini tutan bir uint depolamak:
 
 mapping (address => uint) public accountBalance;
@@ -25,7 +27,7 @@ mapping (address => uint) public accountBalance;
 // Veya userId'ye göre kullanıcı adlarını depolamak/aramak için kullanılabilir
 
 mapping (uint => string) userIdToName; 
-‘’’
+```
 Bir eşleme, esas olarak, verileri depolamak ve aramak için bir anahtar-değer(key-value) deposudur. İlk örnekte anahtar bir adres ve değer(a value) bir uint'tir ve ikinci örnekte anahtar bir uint ve değer bir dizedir(a string).
 
 **Uygulama**
@@ -53,11 +55,11 @@ zombieToOwner adlı bir mapping oluşturun. Anahtar(key) bir uint (zombiyi kimli
     Zombie[] public zombies;
 
 
-// zombieToOwner adlı key uint olarak saklanan ve adress değerinde public giden bir mapping
+    // zombieToOwner adlı key uint olarak saklanan ve adress değerinde public giden bir mapping
 
     mapping (uint => address) public zombieToOwner;
-
-// ownerZombieCount adlı adress ve değerin uint olduğu bir mapping 
+ 
+    // ownerZombieCount adlı adress ve değerin uint olduğu bir mapping 
 
     mapping(address=>uint)   ownerZombieCount;
 
