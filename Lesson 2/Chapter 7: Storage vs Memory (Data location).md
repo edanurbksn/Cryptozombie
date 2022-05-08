@@ -1,6 +1,7 @@
-_Bölüm 7: Depolamaya Karşı Bellek (Veri konumu)_
+**Bölüm 7: Depolamaya Karşı Bellek (Veri konumu)**
 
 Solidity’de değişkenler iki şekilde saklanabilir.Bunlar Storage(Depolama) ve Memory( Bellek).
+
 >Storage(Depolama), blok zincirinde kalıcı olarak depolanan değişkenleri ifade eder. Bilgisayarımızın Sbait diski gibi düşünülebilir.
 >Memory(Bellek) değişkenleri geçicidir ve sözleşmenize yapılan harici işlev çağrıları arasında silinir. Bilgisayarımızın RAM’i gibi düşünülebilir.
 
@@ -8,7 +9,7 @@ Solidity bunları varsayılan olarak işlediğinden çoğu zaman bu anahtar keli
 Durum değişkenleri(State variables: fonksiyonların dışında bildirilen değişkenler) varsayılan olarak depolanır ve blok zincirine kalıcı olarak yazılırken, fonksiyonların içinde bildirilen değişkenler hafızadır ve fonksiyon çağrısı sona erdiğinde kaybolur.
 
 Ancak, bu anahtar kelimeleri, yani işlevler içindeki yapılar ve dizilerle uğraşırken kullanmanız gereken zamanlar vardır:
-
+```
 contract SandwichFactory {
   struct Sandwich {
     string name;
@@ -40,12 +41,12 @@ contract SandwichFactory {
  
   }
 }
-
-Hangisini ne zaman kullanacağınızı henüz tam olarak anlamamamış olabilirsiniz lakin  bu eğitim boyunca siz Solidity derleyicisi ne zaman depolamayı ve ne zaman belleği kullanacağınzı bildirecek ve bizlerde uyaracağız.
+```
+**Hangisini ne zaman kullanacağınızı henüz tam olarak anlamamamış olabilirsiniz lakin  bu eğitim boyunca siz Solidity derleyicisi ne zaman depolamayı ve ne zaman belleği kullanacağınzı bildirecek ve bizlerde uyaracağız.**
 
 Şimdilik, depolama veya bellek bildirmeniz gereken durumların olduğunu bilmemiz yeterlidir.
 
-Uygulama
+**Uygulama**
 Zombilerimize beslenme ve çoğalma yeteneği vermenin zamanı geldi!!!
 
 Bir zombi başka bir yaşam formuyla beslendiğinde, DNA'sı yeni bir zombi oluşturmak için diğer yaşam formunun DNA'sı ile birleşir.
@@ -57,15 +58,15 @@ _targetDna (ayrıca bir uint). Bu işlev public olmalıdır.
 
 Zombimizi başka birinin beslemesine izin vermek istemiyoruz! İlk önce, bu zombiye sahip olduğumuzdan emin olalım. msg.sender öğesinin bu zombinin sahibine eşit olduğunu doğrulamak için bir require ifadesi ekleyin (createRandomZombie işlevinde yaptığımıza benzer).
 
-Not: Yine, yanıt denetleyicimiz ilkel olduğundan, msg.sender'ın önce gelmesini bekler ve sırayı değiştirirseniz yanlış işaretler. Ancak normalde kod yazarken, tercih ettiğiniz sırayı kullanabilirsiniz - ikisi de doğrudur.
+>Not: Yine, yanıt denetleyicimiz ilkel olduğundan, msg.sender'ın önce gelmesini bekler ve sırayı değiştirirseniz yanlış işaretler. Ancak normalde kod yazarken, tercih ettiğiniz sırayı kullanabilirsiniz - ikisi de doğrudur.
 
 Bu zombinin DNA'sını almamız gerekecek. Bu yüzden fonksiyonumuzun yapması gereken bir sonraki şey, myZombie adlı yerel bir Zombie (bir depolama işaretçisi olacak) bildirmektir. Bu değişkeni, zombi dizimizde _zombieId dizinine eşit olacak şekilde ayarlayın.
 
-Şu ana kadar } kapanışını içeren satır da dahil olmak üzere 4 satır kodunuz olmalıdır.
+>Şu ana kadar } kapanışını içeren satır da dahil olmak üzere 4 satır kodunuz olmalıdır.
 
-Bu fonksiyonun  detayları bir sonraki bölümde devam edecektir.
+**Bu fonksiyonun  detayları bir sonraki bölümde devam edecektir.**
 
-
+```
 pragma solidity >=0.5.0 <0.6.0;
 
 import "./zombiefactory.sol";
@@ -80,4 +81,4 @@ contract ZombieFeeding is ZombieFactory {
   }
 
 }
-
+```
