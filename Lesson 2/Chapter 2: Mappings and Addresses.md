@@ -37,7 +37,7 @@ Zombi sahipliğini depolamak için iki eşleme kullanacağız: biri bir zombiye 
 
 zombieToOwner adlı bir mapping oluşturun. Anahtar(key) bir uint (zombiyi kimliğine göre saklayacağız ve arayacağız) ve bir adres(address) değeri olacaktır. Bu haritalamayı public hale getirelim.
 
->Anahtarın bir adres ve değerinin bir uint olduğu OwnerZombieCount adlı bir eşleme oluşturun.
+>Anahtarın bir adres ve değerinin bir uint olduğu OwnerZombieCount adlı bir eşleme oluşturun. Bu eşleme de ise bir adresin kaç adet zombi ye ait olduğu tutulacaktır.
 
     pragma solidity >=0.5.0 <0.6.0;
 
