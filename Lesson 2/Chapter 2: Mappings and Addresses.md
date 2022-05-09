@@ -5,6 +5,7 @@ Veritabanımızdaki zombileri sahiplendirerek oyunumuzu çok oyunculu hale getir
 **Adresses(adresler)**
 Ethereum blok zinciri, banka hesapları gibi düşünebileceğiniz hesaplardan oluşur. Bir hesabın bir Ether bakiyesi (Ethereum blokchainde kullanılan para birimi) vardır ve tıpkı banka hesabınızın diğer banka hesaplarına para transferi yapabilmesi gibi, diğer hesaplara Ether ödemeleri gönderip alabilirsiniz. Ayrıca Ethereum blok zincirin de 2 tür hesap(adres) vardır. Bunlar akıllı kontratların adresleri ve Ethereum kullanıcı hesap adresleridir.
 Bu adresler, Ethereum ağında kimlik oluşturma, fonlarımızı yönetme ve Ethereum uygulamaları için oturum açmamıza olanak sağlar.
+
 >Her hesabın bir banka hesap numarası gibi düşünebileceğiniz bir adresi vardır. Bu hesaba işaret eden benzersiz bir tanımlayıcıdır ve şöyle görünür:
 `0x571743307078d0859A3f9C7476f898e0793b6b2A`
 
