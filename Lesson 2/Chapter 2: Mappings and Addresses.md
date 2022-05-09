@@ -3,7 +3,7 @@ Bölüm 2: Eşlemeler(mapping) ve Adresler(address)
 Veritabanımızdaki zombileri sahiplendirerek oyunumuzu çok oyunculu hale getirelim.
 >Bunu yapmak için 2 yeni veri türüne ihtiyacımız olacak: mapping(eşleme) ve address(adresler).
 **Adresses(adresler)**
-Ethereum blok zinciri, banka hesapları gibi düşünebileceğiniz hesaplardan oluşur. Bir hesabın bir Ether bakiyesi (Ethereum blokchainde kullanılan para birimi) vardır ve tıpkı banka hesabınızın diğer banka hesaplarına para transferi yapabilmesi gibi, diğer hesaplara Ether ödemeleri gönderip alabilirsiniz.
+Ethereum blok zinciri, banka hesapları gibi düşünebileceğiniz hesaplardan oluşur. Bir hesabın bir Ether bakiyesi (Ethereum blokchainde kullanılan para birimi) vardır ve tıpkı banka hesabınızın diğer banka hesaplarına para transferi yapabilmesi gibi, diğer hesaplara Ether ödemeleri gönderip alabilirsiniz. Ayrıca Ethereum blok zincirin de 2 tür adres vardır. Bunlar akıllı kontratların adresleri ve Ethereum kullanıcı hesap adresleridir.
 
 >Her hesabın bir banka hesap numarası gibi düşünebileceğiniz bir adresi vardır. Bu hesaba işaret eden benzersiz bir tanımlayıcıdır ve şöyle görünür:
 `0x571743307078d0859A3f9C7476f898e0793b6b2A`
