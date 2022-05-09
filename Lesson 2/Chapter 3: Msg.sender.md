@@ -2,7 +2,7 @@
 
 Artık bir zombinin kime ait olduğunu takip etmek için eşlemelerimiz(mapping) olduğuna göre, onları kullanmak için _createZombie yöntemini güncellemek isteyeceğiz.
 
->Bunu yapmak için msg.sender adında bir şey kullanmamız gerekiyor.
+>Bunu yapmak için msg.sender adında global değişkeni kullanmamız gerekiyor.
 
 **msg.sender**
 Solidity'de, tüm fonksiyonlar için kullanılabilen belirli global değişkenler vardır. Bunlardan biri, mevcut işlevi çağıran kişinin (veya akıllı kontratın) adresini ifade eden msg.sender'dır.
