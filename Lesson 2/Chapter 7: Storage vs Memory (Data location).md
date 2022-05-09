@@ -2,7 +2,7 @@
 
 Solidity’de değişkenler iki şekilde saklanabilir.Bunlar Storage(Depolama) ve Memory( Bellek).
 
->Storage(Depolama), blok zincirinde kalıcı olarak depolanan değişkenleri ifade eder. Bilgisayarımızın Sbait diski gibi düşünülebilir.
+>Storage(Depolama), blok zincirinde kalıcı olarak depolanan değişkenleri ifade eder. Bilgisayarımızın Sabit diski gibi düşünülebilir.
 >Memory(Bellek) değişkenleri geçicidir ve sözleşmenize yapılan harici işlev çağrıları arasında silinir. Bilgisayarımızın RAM’i gibi düşünülebilir.
 
 Solidity bunları varsayılan olarak işlediğinden çoğu zaman bu anahtar kelimeleri kullanmanıza gerek yoktur. 
