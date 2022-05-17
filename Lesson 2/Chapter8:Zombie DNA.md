@@ -1,5 +1,5 @@
  
-**Bölüm 8:Zombie DNA**
+**Bölüm 8 :Zombie DNA**
 
 Hadi “FeedAndMultiply” fonksiyonunu yazmayı bitirelim.
 
